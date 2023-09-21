@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">KaNa</string>
+    <string name="search_result">검색 결과</string>
+    <string name="storage_box">내 보관함</string>
+</resources>

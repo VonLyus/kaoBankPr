@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item android:drawable="@drawable/tab_layout_btn_shape_selected"
+        android:state_selected="true"
+        app:tabIndicatorColor="@color/white"
+        app:tabIndicatorHeight="5dp"
+        app:tabRippleColor="@android:color/transparent"
+        app:tabTextAppearance="@style/tabTextSelect"
+        />
+
+    <itme android:drawable="@drawable/tab_layout_btn_shape_unselected"
+        android:state_selected="false"
+        android:state_focused="false"
+        android:state_pressed="false"
+        app:tabIndicatorColor="@color/white"
+        app:tabIndicatorHeight="5dp"
+        app:tabRippleColor="@android:color/transparent"
+        app:tabTextAppearance="@style/tabTextUnSelect"/>
+
+</selector>
