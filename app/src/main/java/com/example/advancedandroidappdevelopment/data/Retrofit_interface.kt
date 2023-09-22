@@ -1,11 +1,13 @@
 package com.example.advancedandroidappdevelopment.data
 
+import com.example.advancedandroidappdevelopment.data.model.ImageSearchResponse
+import com.example.advancedandroidappdevelopment.data.model.VideoSearchResponse
 import retrofit2.Call
 import retrofit2.http.GET
 import retrofit2.http.Header
 import retrofit2.http.Query
 
-interface SimpleApi {
+interface Retrofit_interface {
     // 존재하지 않는 페이지를 호출하는 등의 통신 오류가 발생할 경우 충돌이 발생하게 된다.
     @GET("v2/search/image")
     fun image_search(
@@ -15,7 +17,18 @@ interface SimpleApi {
         @Query("page") page: Int,
         @Query("size") size: Int
     ) : Call<ImageSearchResponse?>?
+
+    @GET("v2/search/vclip")
+    fun vedio_search(
+        @Header("Authorization") apiKey: String ,
+        @Query("query") query : String,
+        @Query("sort") sort : String,
+        @Query("page") page: Int,
+        @Query("size") size: Int
+    ) : Call<VideoSearchResponse?>?
 }
+
+
 //@GET("v2/search/image")
 //suspend fun image_search(
 //    @Header("Authorization") apiKey: String ,

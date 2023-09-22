@@ -3,7 +3,7 @@ package com.example.advancedandroidappdevelopment.main
 //import androidx.lifecycle.MutableLiveData
 //import androidx.lifecycle.ViewModel
 //import androidx.lifecycle.viewModelScope
-//import com.example.advancedandroidappdevelopment.data.ImageSearchResponse
+//import com.example.advancedandroidappdevelopment.data.model.ImageSearchResponse
 //import com.example.advancedandroidappdevelopment.data.Repository
 //import kotlinx.coroutines.launch
 //import retrofit2.Response
@@ -14,7 +14,7 @@ package com.example.advancedandroidappdevelopment.main
 //
 //    fun image_search(){
 //        viewModelScope.launch {
-//            val response = repository.image_search("페이커","recency")
+//            val response = repository.image_search("바다","recency")
 //            myCustomPosts.value = response
 //        }
 //    }

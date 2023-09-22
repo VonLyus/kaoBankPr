@@ -1,4 +1,4 @@
-package com.example.advancedandroidappdevelopment.data
+package com.example.advancedandroidappdevelopment.data.model
 
 import com.google.gson.annotations.SerializedName
 
@@ -11,7 +11,6 @@ data class ImageSearchResponse (
     val metaData: MetaData
 
 ){
-
     data class Documents(
         @SerializedName("collection")
         val collection : String,

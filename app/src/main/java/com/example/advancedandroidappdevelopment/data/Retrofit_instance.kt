@@ -5,9 +5,9 @@ import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
 
-object RetrofitInstance {
-    val apiService: SimpleApi
-        get() = instance.create(SimpleApi::class.java)
+object Retrofit_instance {
+    val apiService: Retrofit_interface
+        get() = instance.create(Retrofit_interface::class.java)
 
 
     private val instance: Retrofit
@@ -19,14 +19,3 @@ object RetrofitInstance {
                 .build()
         }
 }
-//private val retrofit by lazy {
-//    val gson = GsonBuilder().setLenient().create()
-//    Retrofit.Builder()
-//        .baseUrl(BASE_URL)
-//        .addConverterFactory(GsonConverterFactory.create(gson))
-//        .build()
-//}
-//
-//val api : SimpleApi by lazy {
-//    retrofit.create(SimpleApi::class.java)
-//}

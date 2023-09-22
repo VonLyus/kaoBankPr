@@ -41,7 +41,6 @@ object Utils {
 
     /**
      * 마지막 검색어를 Shared Preferences에 저장합니다.
-     *
      * @param context 호출하는 컨텍스트 (일반적으로 Activity 또는 Application)
      * @param query 저장하려는 검색어 문자열
      */

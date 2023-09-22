@@ -12,9 +12,10 @@ import android.widget.Toast
 import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import com.example.advancedandroidappdevelopment.Utils
 import com.example.advancedandroidappdevelopment.data.Constants
-import com.example.advancedandroidappdevelopment.data.ImageSearchResponse
-import com.example.advancedandroidappdevelopment.data.RetrofitInstance.apiService
+import com.example.advancedandroidappdevelopment.data.model.ImageSearchResponse
+import com.example.advancedandroidappdevelopment.data.Retrofit_instance.apiService
 import com.example.advancedandroidappdevelopment.data.SearchItemModel
+import com.example.advancedandroidappdevelopment.data.model.VideoSearchResponse
 import com.example.advancedandroidappdevelopment.databinding.FragmentSearchResultBinding
 import retrofit2.Call
 import retrofit2.Callback
@@ -86,7 +87,7 @@ class SearchResultFragment : Fragment() {
     }
 
     private fun fetchImageResults(query: String){
-        apiService.image_search(Constants.AUTH_HEADER, query, "recency", 1, 80)
+        apiService.image_search(Constants.AUTH_HEADER, query, "recency", 1, 20)
             ?.enqueue(object : Callback<ImageSearchResponse?>{
             override fun onResponse(
                 call: Call<ImageSearchResponse?>,
@@ -114,6 +115,22 @@ class SearchResultFragment : Fragment() {
             }
             })
     }
+//    private fun fetchVedioResults(query: String){
+//        apiService.image_search(Constants.AUTH_HEADER, query, "recency", 1, 10)
+//            ?.enqueue(object : Callback<VideoSearchResponse?>{
+//                override fun onResponse(
+//                    call: Call<VideoSearchResponse?>,
+//                    response: Response<VideoSearchResponse?>
+//                ) {
+//
+//                }
+//                override fun onFailure(call: Call<VideoSearchResponse?>, t: Throwable) {
+//                    Log.d("onFailure","onFailure:  ${t.message}")
+//                }
+//            }
+//
+//    }
+
 
 }
 
